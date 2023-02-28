@@ -1,0 +1,105 @@
+/*----Common----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+    overflow: hidden;
+}
+.content-wrapper{
+    height: 100%;
+    background-image: url('assets/img/forest.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-bar, .footer-content{
+    background-color: rgba(14, 10, 2, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 5px 25px;
+}
+.site-logo:hover, .birds-li-item:hover, .footer-text-link:hover, .footer-logo:hover{
+    color:rgb(180, 146, 63);
+    cursor: pointer;
+}
+.site-logo, .footer-logo{
+    width: 100px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*--------*/
+
+/*----Top bar----*/
+.top-bar{
+
+}
+.site-logo{
+    background-image: url('assets/svg/logo.svg');
+}
+.site-logo:hover{
+    background-image: url('assets/svg/logoGolden.svg');
+}
+.birds-list{
+    list-style: none;
+    display: flex;
+    gap:25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+/*--------*/
+
+/*----Player----*/
+.player{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.player-btn-wrapper{
+    cursor: pointer;
+    background-image: url('assets/svg/playWhite.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:200px;
+    height: 200px;
+}
+.player-btn-wrapper:hover{
+    background-image: url('assets/svg/play.svg');
+}
+.playerIsActive{
+    background-image: url('assets/svg/pauseWhite.svg');
+}
+.playerIsActive:hover{
+    background-image: url('assets/svg/pause.svg');
+}
+/*--------*/
+
+/*----Footer----*/
+.footer-text{
+    display: flex;
+    gap:10px;
+    font-size: 20px;
+
+}
+.footer-logo{
+    background-image: url('assets/svg/rss.svg');
+}
+.footer-logo:hover{
+    background-image: url('assets/svg/rssGolden.svg');
+}
+/*--------*/
