@@ -23,10 +23,17 @@ function setNewBackground(newBack){
     let folder ='url('+'assets/img/'+newBack+')';
     content.style.backgroundImage = folder;
 }
+function setActiveOption(bird){
+    birds.forEach(function(item){
+        item.classList.remove('activeSoundOption');
+    })
+    bird.classList.add('activeSoundOption');
+}
 
 birds.forEach(function(bird){
     bird.onclick = function(){
         setNewSong(bird.dataset.audio);
-        setNewBackground(bird.dataset.bg)
+        setNewBackground(bird.dataset.bg);
+        setActiveOption(bird);
     }
 });

@@ -83,6 +83,9 @@ body, html{
 .playerIsActive:hover{
     background-image: url('assets/svg/pause.svg');
 }
+.activeSoundOption{
+    text-decoration:rgb(180, 146, 63) underline;
+}
 /*--------*/
 
 /*----Footer----*/
