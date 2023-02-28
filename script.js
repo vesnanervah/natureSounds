@@ -18,9 +18,15 @@ function setNewSong(newSong){
     currentSong.play();
     playerBtn.classList.add('playerIsActive')
 }
+function setNewBackground(newBack){
+    let content = document.querySelector('.content-wrapper');
+    let folder ='url('+'assets/img/'+newBack+')';
+    content.style.backgroundImage = folder;
+}
 
 birds.forEach(function(bird){
     bird.onclick = function(){
-        setNewSong(bird.dataset.audio)
+        setNewSong(bird.dataset.audio);
+        setNewBackground(bird.dataset.bg)
     }
 });
