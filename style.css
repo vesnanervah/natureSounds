@@ -89,15 +89,35 @@ body, html{
 /*--------*/
 
 /*----Footer----*/
-.footer-text{
-    display: flex;
-    gap:10px;
-    font-size: 20px;
-
-}
 .footer-logo{
     background-image: url('assets/svg/rss.svg');
 }
+.footer-copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap:2px
+}
+.git-link{
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.git-icon{
+    background-image: url('assets/img/gitWhite.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    width:30px;
+    height: 30px;
+}
+
 .footer-logo:hover{
     background-image: url('assets/svg/rssGolden.svg');
 }
