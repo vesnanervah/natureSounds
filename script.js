@@ -2,6 +2,9 @@ let birds = document.querySelectorAll('.birds-li-item');
 let playerBtn = document.querySelector('.player-btn-wrapper');
 let contentWrapper = document.querySelector('.content-wrapper');
 let gitLink = document.querySelector('.footer-git');
+let burger = document.querySelector('.burger');
+let burgerStripes = document.querySelectorAll('.burger-stripe');
+let menu = document.querySelector('.top-bar');
 let currentSong = new Audio;
 currentSong.src = 'assets/audio/forest.mp3';
 
@@ -47,4 +50,25 @@ gitLink.onpointerover = function(){
 gitLink.onpointerout = function(){
     document.querySelector('.git-nick').style.color = `white`;
     document.querySelector('.git-icon').style.backgroundImage = "url('assets/img/gitWhite.png')";
+}
+
+function burgerChange(){
+    burger.classList.toggle('burgerOpened');
+    if(burger.classList.contains('burgerOpened')){
+        burgerStripes[1].style.display = 'none';
+        burgerStripes[0].style.transform = 'rotate(45deg)';
+        burgerStripes[0].style.translate = '0 25px'
+        burgerStripes[2].style.transform = 'rotate(-45deg)';
+    }
+    else{
+        burgerStripes[1].style.display = 'flex';
+        burgerStripes[0].style.transform = '';
+        burgerStripes[0].style.translate = ''
+        burgerStripes[2].style.transform = '';
+    }
+}
+
+burger.onclick = function(e){
+    menu.classList.toggle('menuIsOpened');
+    burgerChange();
 }
