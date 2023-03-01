@@ -3,6 +3,7 @@ let playerBtn = document.querySelector('.player-btn-wrapper');
 let contentWrapper = document.querySelector('.content-wrapper');
 let gitLink = document.querySelector('.footer-git');
 let currentSong = new Audio;
+currentSong.src = 'assets/audio/forest.mp3';
 
 playerBtn.onclick = function(){
     if(playerBtn.classList.contains('playerIsActive')){
